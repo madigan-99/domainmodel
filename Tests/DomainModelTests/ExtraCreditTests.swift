@@ -34,7 +34,6 @@ class ExtraCreditTests: XCTestCase {
         XCTAssert(tenBad.currency == "USD")
     }
     
-    
     func testCreateSalaryJob2() {
         let job = Job(title: "Guest Lecturer", type: Job.JobType.Salary(5000))
         XCTAssert(job.calculateIncome(50) == 5000)
