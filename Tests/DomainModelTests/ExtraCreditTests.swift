@@ -18,7 +18,7 @@ class ExtraCreditTests: XCTestCase {
     }
     
     func testSubGBPtoGBP() {
-      let total = eigth.add(seventh)
+      let total = eigth.subtract(seventh)
       XCTAssert(total.amount == 42)
       XCTAssert(total.currency == "GBP")
     }
@@ -65,6 +65,11 @@ class ExtraCreditTests: XCTestCase {
         
         job.raise(byAmount: 500.50)
         XCTAssert(job.calculateIncome(0) == 3500)
+    }
+    
+    func testPerson() {
+        let ted = Person(firstName: "Ted", lastName: "Neward", age: 45)
+        XCTAssert(ted.toString() == "[Person: firstName:Ted lastName:Neward age:45 job:nil spouse:nil]")
     }
     
     static var allTests = [
