@@ -8,7 +8,6 @@ class MoneyTests: XCTestCase {
   let fiveGBP = Money(amount: 5, currency: "GBP")
   let fifteenEUR = Money(amount: 15, currency: "EUR")
   let fifteenCAN = Money(amount: 15, currency: "CAN")
-  
   func testCanICreateMoney() {
     let oneUSD = Money(amount: 1, currency: "USD")
     XCTAssert(oneUSD.amount == 1)
@@ -80,7 +79,7 @@ class MoneyTests: XCTestCase {
     XCTAssert(total.amount == 10)
     XCTAssert(total.currency == "GBP")
   }
-
+    
     static var allTests = [
         ("testCanICreateMoney", testCanICreateMoney),
 
